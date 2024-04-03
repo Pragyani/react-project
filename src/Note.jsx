@@ -8,7 +8,7 @@ export const Note = () => {
                 <br />
                 <p>this is the content</p>
                 <button className="btn">
-                    aanirudh-</button>
+                    -</button>
             </div>
 
 
