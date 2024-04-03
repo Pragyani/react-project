@@ -7,7 +7,8 @@ export const Note = () => {
                 <h1>Tittle</h1>
                 <br />
                 <p>this is the content</p>
-                <button className="btn">--</button>
+                <button className="btn">
+                    aanirudh-</button>
             </div>
 
 
