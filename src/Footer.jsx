@@ -1,14 +1,13 @@
-import { imgcopyright } from "./Images/logo"
 
 
-  const Footer =()=>{
+const Footer = () => {
 
-    const year = new Date().getFullYear()
-return(
+  const year = new Date().getFullYear()
+  return (
     <>
-  <footer>CopyRight  {year}</footer>
+      <footer>CopyRight  {year}</footer>
     </>
-)
+  )
 }
- 
+
 export default Footer
