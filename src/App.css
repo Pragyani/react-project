@@ -84,17 +84,9 @@ textarea {
 }
 
 button {
-  /* padding: 8.5px;
-  border-radius: 50%;
-  border: none;
-  font-weight: bold;
-  font-size: larger;
-  margin-left: 94.5%;
-  color: #949ba3; */
-  /* position: relative; */
-  /* float: right; */
+
   margin: 10px;
-  color: #f4b400;
+  color: black;
   margin-left: 85%;
   border: none;
   width: 60px;
@@ -104,11 +96,13 @@ button {
   outline: none;
   box-shadow: 3px 3px 15px -10px black;
   border-radius: 50%;
+  font-weight: bold;
+  font-size: xx-large;
 }
 
 button:hover {
   color: rgb(42, 41, 41);
-  background-color: #949ba3;
+  background-color: #a4c7d3;
   box-shadow: 3px 5px 15px -5px black;
   cursor: pointer;
 }
@@ -151,7 +145,7 @@ input {
   position: relative;
   float: right;
   margin: 10px;
-  color: #f4b400;
+  color:  black;;
   border: none;
   width: 60px;
   height: 60px;
@@ -160,8 +154,10 @@ input {
   outline: none;
   box-shadow: 3px 3px 15px -10px black;
   border-radius: 50%;
+  font-weight: bolder;
+  font-size: xx-large;
 }
 
 .note .btn:hover {
-  background-color: #f5ba13;
+  background-color:rgb(193, 149, 149);
 }
