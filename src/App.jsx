@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Header} from "./Header";
+import { Header } from "./Header";
 import "./App.css"
 import Footer from "./Footer"
 import CreateNote from "./CreateNote";
@@ -18,11 +18,7 @@ const App = () => {
         console.log(note)
     }
 
-    // const onDelete=(id)=>{
-    //       setAddItems((olddata)=>
-    //       olddata.filter((curdata,indx)=>{
-    //         return  indx !== id;
-    //       }))
+
     const onDelete = (id) => {
         setAddItems((olddata) =>
             olddata.filter((currdata, indx) => {
