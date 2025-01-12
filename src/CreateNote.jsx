@@ -6,57 +6,46 @@ const CreateNote = (props) => {
         title: "",
         content: "",
     })
- const [expand , setExpand] =useState(false)
+    const [expand, setExpand] = useState(false)
 
     const inputEvent = (e) => {
 
         const { name, value } = e.target;
 
         setNote((preVal) => {
-            return {
-                ...preVal,
-                [name]: value,
-            };
+            return { ...preVal, [name]: value, };
         });
     }
 
     const addEvent = () => {
         (props.passNote(note))
-        setNote({
-            title: "",
-            content: "",
-        })
+        setNote({ title: "", content: "", })
     }
 
 
-    const fromField = (eventfrom) => {
-        return (
-            eventfrom.preventDefault())
-    }
- 
-    const expandIt =()=>{
-        setExpand(true)
-    }
+    const fromField = (eventfrom) => (eventfrom.preventDefault());
 
-     const backToNormal =()=>{
-        setExpand()
-     }
+    const expandIt = () => { setExpand(true) }
+
+    const backToNormal = () => setExpand();
+
     return (
         <>
             <div className="main_note">
 
                 <form onClick={fromField} onDoubleClick={backToNormal}>
-           
-           {expand ?
-                    <input type="text" placeholder="Tittle"
-                        autoComplete="off" value={note.title} onChange={inputEvent}
-                        name="title" />: null}
+
+                    {expand ?
+                        <input type="text" placeholder="Tittle"
+                            autoComplete="off" value={note.title} onChange={inputEvent}
+                            name="title" /> : null}
 
                     <textarea placeholder="Write A Note" rows=''
                         column='' value={note.content} onChange={inputEvent}
-                        name="content"  onClick={expandIt}></textarea>
-
-                    {expand ?<button onClick={addEvent}> + </button>:null}
+                        name="content" onClick={expandIt}></textarea>
+                        
+                    {expand ? <button onClick={addEvent}> + </button> : null}
+                    
                 </form>
             </div>
 
@@ -64,5 +53,4 @@ const CreateNote = (props) => {
         </>
     )
 }
-
 export default CreateNote
