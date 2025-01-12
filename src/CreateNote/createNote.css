@@ -1,0 +1,135 @@
+.main_note {
+    width: 850px;
+    padding: 15px 10px 5px 10px;
+    margin: 10px auto;
+  }
+  
+  form {
+    min-height: 50px;
+    color: #ecf0f1;
+    padding: 15px 10px 5px 10px;
+    box-shadow: 3px 5px 15px -5px black;
+    border: 1px solid rgba(0, 0, 0, 0.323);
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  form:hover {
+    box-shadow: 3px 5px 15px -5px rgb(87, 81, 81);
+  }
+  
+  textarea {
+    width: 100% !important;
+    line-height: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    margin: 10px 0;
+    resize: none;
+    height: auto;
+    margin-left: 12px;
+  }
+
+  input {
+    color: rgb(42, 41, 41);
+    width: 100%;
+    line-height: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    margin-left: 12px;
+    font-weight: bold;
+  }
+
+  
+  .add-btn {
+    margin: 10px;
+    color: black;
+    margin-left: 85%;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 3px 3px 15px -10px rgba(0, 0, 0, 0.333);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: x-large;
+    position: relative;
+    left: 72px;
+  }
+  
+  .add-btn:hover {
+    color: rgb(42, 41, 41);
+    background-color: #5be1ae9a !important;
+    box-shadow: 3px 5px 15px -5px black;
+    cursor: pointer;
+  }
+  
+
+  /* note.jsx styling */
+
+
+  .note {
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 7px #ccc;
+    padding: 10px;
+    width: 389px;
+    margin: 16px;
+    float: left;
+  }
+  
+  .note h1 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+  }
+  
+  .note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+  
+
+
+  .del-btn{
+    position: relative;
+    /* right: 12px; */
+    top: 12px;
+    left: 12px;
+    float: right;
+    margin: 10px;
+    color: black;
+    border: none;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 3px 3px 15px -10px black;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: xx-large;
+    padding: 3px;
+  }
+
+  .del-btn:hover{
+    background-color: rgb(235, 147, 147)!important;
+  }
+
+  .del-btn .deleted{
+    position: relative;
+    right: 3px;
+    top: -13px;
+    font-size: 20px;
+    font-weight: lighter !important;
+  }
+
+  .deleted:hover{
+    color: white;
+  }

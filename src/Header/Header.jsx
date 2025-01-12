@@ -1,6 +1,13 @@
+/**Internal Dependencies */
 import React from "react";
 import Img from "../Images/logo";
 import './header.css';
+
+/** External Deendencies.*/
+import { BiSolidDashboard } from "react-icons/bi";
+import { FaUserLarge } from "react-icons/fa6";
+import { IoMdRefreshCircle } from "react-icons/io";
+import { MdDarkMode } from "react-icons/md";
 
 export const Header = ({ toggleTheme, isDarkMode }) => {
     return (
@@ -9,13 +16,13 @@ export const Header = ({ toggleTheme, isDarkMode }) => {
             <p>AniPragya Keep</p>
 
             <ul>
-                <li>about us</li>
-                <li>dashboard</li>
-                <li>user</li>
+                <li> <IoMdRefreshCircle/></li>
+                <li><BiSolidDashboard/></li>
+                <li><FaUserLarge/></li>
                 <div className="theme-toggle">
                     <label>
                         <input type="checkbox" checked={isDarkMode} onChange={toggleTheme}  className="chckbox"/>
-                        Dark Mode
+                      <li><MdDarkMode/></li>
                     </label>
                 </div>
             </ul>

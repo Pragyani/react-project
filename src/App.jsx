@@ -1,52 +1,54 @@
-import React, { useState, useEffect } from "react";
-import { Header } from "./Header";
-import "./App.css";
+/** 
+ *  Internal Dependecies
+*/
+import React, { useState } from "react";
 import Footer from "./Footer";
-import CreateNote from "./CreateNote";
-import { Note } from "./Note";
+import { Header } from "./Header/Header";
+import CreateNote from "./CreateNote/CreateNote";
+import { Note } from "./CreateNote/Note";
+import "./App.css"; 
+
 
 const App = () => {
-    const [addItems, setAddItems] = useState([]);
-    const [theme, setTheme] = useState("light");
+  const [additems, setAddItems] = useState([]);
+  const [isDarkMode, setIsDarkMode] = useState(false);  // State for dark mode
 
-    useEffect(() => {
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme) {
-            setTheme(savedTheme);
-        }
-    }, []);
+  const addNote = (note) => {
+    setAddItems((preData) => {
+      return [...preData, note];
+    });
+  };
 
-    const toggleTheme = () => {
-        const newTheme = theme === "light" ? "dark" : "light";
-        setTheme(newTheme);
-        localStorage.setItem("theme", newTheme);
-    };
-
-    const addNote = (note) => {
-        setAddItems((preData) => {
-            return [...preData, note];
-        });
-    };
-
-    const onDelete = (id) => {
-        setAddItems((oldData) => oldData.filter((currData, indx) => {
-            return indx !== id;
-        })
-        );
-    };
-
-    return (
-        <div className={`app ${theme}`}>
-            <Header toggleTheme={toggleTheme} isDarkMode={theme === "dark"} />
-            <CreateNote passNote={addNote} />
-            {addItems.map((data, index) => {
-                return (
-                    <Note
-                        title={data.title} contet={data.content}
-                        key={index} id={index} deletItem={onDelete} />);
-            })}
-            <Footer />
-        </div>
+  const onDelete = (id) => {
+    setAddItems((olddata) =>
+      olddata.filter((currdata, indx) => {
+        return indx !== id;
+      })
     );
+  };
+
+  // Function to toggle dark mode
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+
+  return (
+    <div className={isDarkMode ? "app dark" : "app light"}>
+      <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+      <CreateNote passNote={addNote} />
+      {additems.map((data, index) => {
+        return (
+          <Note
+            title={data.title}
+            contet={data.content}
+            key={index}
+            id={index}
+            deletItem={onDelete}
+          />
+        );
+      })}
+      <Footer />
+    </div>
+  );
 };
 export default App;
