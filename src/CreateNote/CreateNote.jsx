@@ -22,8 +22,12 @@ const CreateNote = (props) => {
     }
 
     const addEvent = () => {
-        (props.passNote(note))
-        setNote({ title: "", content: "", })
+        if (note.title === "", note.content === "") {
+            alert("write some note . ");
+        } else {
+            (props.passNote(note))
+            setNote({ title: "", content: "", })
+        }
     }
 
     const fromField = (eventfrom) => (eventfrom.preventDefault());
