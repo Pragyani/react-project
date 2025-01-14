@@ -3,14 +3,17 @@
  */
 import React, { useState } from "react";
 import './createNote.css';
-
+import Modal from "../MODAL/modal";
 
 const CreateNote = (props) => {
     const [note, setNote] = useState({
         title: "",
         content: "",
     })
-    const [expand, setExpand] = useState(false)
+    const [expand, setExpand] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [message, setMessage] = useState('');
+
 
     const inputEvent = (e) => {
 
@@ -23,11 +26,15 @@ const CreateNote = (props) => {
 
     const addEvent = () => {
         if (note.title === "", note.content === "") {
-            alert("write some note . ");
+            setShowModal(true);
+            setMessage('Please Create your note , then it will added in keep')
         } else {
             (props.passNote(note))
             setNote({ title: "", content: "", })
         }
+    }
+    const CloseModal = () => {
+        setShowModal(false);
     }
 
     const fromField = (eventfrom) => (eventfrom.preventDefault());
@@ -50,6 +57,9 @@ const CreateNote = (props) => {
 
                 </form>
             </div>
+            {
+                showModal && <Modal message={message} closeModal={CloseModal} />
+            }
         </>
     )
 }
