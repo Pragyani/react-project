@@ -6,8 +6,10 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff; /* Light mode background */
-  color: #333; /* Light mode text color */
+  background-color: #ffffff;
+  /* Light mode background */
+  color: #333;
+  /* Light mode text color */
 }
 
 div {
@@ -17,7 +19,8 @@ div {
 .header {
   display: flex;
   flex-direction: row;
-  background-color: #e0e3e6; /* Light header background */
+  background-color: #e0e3e6;
+  /* Light header background */
   margin-top: 0%;
   height: 100%;
   position: sticky;
@@ -49,29 +52,37 @@ footer {
   word-spacing: 4px;
   font-size: small;
   text-align: center;
-  background-color: #e0e3e6; /* Light footer background */
+  background-color: #e0e3e6;
+  /* Light footer background */
   padding-top: 5px;
+  height: 100%;
 }
 
 
 /* Dark Mode Styles */
 .app.dark {
-  background-color: #333; /* Dark background for the app */
-  color: #ddd; /* Light text color for dark mode */
+  background-color: #333;
+  /* Dark background for the app */
+  color: #ddd;
+  /* Light text color for dark mode */
 }
 
 .app.dark .header {
-  background-color: #444; /* Dark header background */
+  background-color: #444;
+  /* Dark header background */
   color: white;
 }
 
 .app.dark footer {
-  background-color: #444; /* Dark footer background */
+  background-color: #444;
+  /* Dark footer background */
 }
 
 .app.dark .note {
-  background-color: #555; /* Dark note background */
-  color: #ddd; /* Light text color for notes in dark mode */
+  background-color: #555;
+  /* Dark note background */
+  color: #ddd;
+  /* Light text color for notes in dark mode */
 }
 
 .app.dark button {
@@ -81,32 +92,41 @@ footer {
 
 .app.dark button:hover {
   color: rgb(42, 41, 41);
-  background-color: #6a7d7f; /* Dark button hover */
+  background-color: #6a7d7f;
+  /* Dark button hover */
 }
 
 .app.dark .note .btn {
-  background-color: #666; /* Dark button background */
-  color: #fff; /* White text color */
+  background-color: #666;
+  /* Dark button background */
+  color: #fff;
+  /* White text color */
 }
 
 /* Light Mode Styles (optional) */
 .app.light {
-  background-color: #ffffff; /* Light background for the app */
-  color: #333; /* Dark text color for light mode */
+  background-color: #ffffff;
+  /* Light background for the app */
+  color: #333;
+  /* Dark text color for light mode */
   width: 100%;
 }
 
 .app.light .header {
-  background-color: #e0e3e6; /* Light header background */
+  background-color: #e0e3e6;
+  /* Light header background */
 }
 
 .app.light footer {
-  background-color: #e0e3e6; /* Light footer background */
+  background-color: #e0e3e6;
+  /* Light footer background */
 }
 
 .app.light .note {
-  background-color: #fff; /* Light note background */
-  color: #333; /* Dark text color for notes in light mode */
+  background-color: #fff;
+  /* Light note background */
+  color: #333;
+  /* Dark text color for notes in light mode */
 }
 
 .app.light button {
@@ -114,17 +134,21 @@ footer {
 }
 
 .app.light button:hover {
-  background-color: #a4c7d3; /* Light button hover */
+  background-color: #a4c7d3;
+  /* Light button hover */
 }
 
 .app.light .note .btn {
-  background-color: #f0f0f0; /* Light button background */
-  color: black; /* Black text color */
+  background-color: #f0f0f0;
+  /* Light button background */
+  color: black;
+  /* Black text color */
 }
 
-.app.dark input{
+.app.dark input {
   color: white;
 }
-.app.dark textarea{
+
+.app.dark textarea {
   color: white;
 }
