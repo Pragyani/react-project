@@ -79,7 +79,7 @@ footer {
 }
 
 .app.dark .note {
-  background-color: #555;
+  background-color: transparent;
   /* Dark note background */
   color: #ddd;
   /* Light text color for notes in dark mode */
