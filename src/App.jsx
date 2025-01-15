@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import { Header } from "./Header/Header";
 import CreateNote from "./CreateNote/CreateNote";
 import { Note } from "./CreateNote/Note";
-import "./App.css"; 
+import "./App.css";
 
 
 const App = () => {
@@ -33,22 +33,24 @@ const App = () => {
   };
 
   return (
-    <div className={isDarkMode ? "app dark" : "app light"}>
-      <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-      <CreateNote passNote={addNote} />
-      {additems.map((data, index) => {
-        return (
-          <Note
-            title={data.title}
-            contet={data.content}
-            key={index}
-            id={index}
-            deletItem={onDelete}
-          />
-        );
-      })}
-      <Footer />
-    </div>
+    <>
+      <div className={isDarkMode ? "app dark" : "app light"}>
+        <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+        <CreateNote passNote={addNote} />
+        {additems.map((data, index) => {
+          return (
+            <Note
+              title={data.title}
+              contet={data.content}
+              key={index}
+              id={index}
+              deletItem={onDelete}
+            />
+          );
+        })}
+        <Footer />
+      </div>
+    </>
   );
 };
 export default App;
