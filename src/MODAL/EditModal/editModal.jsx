@@ -14,7 +14,7 @@ const EditModal = ({ title, content, onClose, onSave }) => {
 
     return (
         <div className="edit-overlay" onClick={handleClickOutside}>
-            <div className="edit-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="edit-modal">
                 <input
                     type="text"
                     value={newTitle}
