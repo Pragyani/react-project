@@ -94,6 +94,12 @@ input {
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
+  width: 295px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: auto;
+  word-wrap: break-word;
+  position: relative;
+  top: -32px;
 }
 
 .note p {
@@ -106,14 +112,14 @@ input {
 
 .del-btn {
   position: relative;
-  /* right: 12px; */
-  top: 12px;
   left: 12px;
+  top: 12px;
+  left: 22px;
   float: right;
-  margin: 10px;
+  /* margin: 10px; */
   color: black;
   border: none;
-  width: 20px;
+  width: 30px;
   height: 20px;
   background-color: transparent;
   cursor: pointer;
@@ -126,17 +132,57 @@ input {
 }
 
 .del-btn:hover {
-  background-color: rgb(235, 147, 147) !important;
+  background: none !important;
 }
+
 
 .del-btn .deleted {
   position: relative;
   right: 3px;
   top: -13px;
-  font-size: 20px;
+  font-size: 16.5px;
   font-weight: lighter !important;
 }
 
-.deleted:hover {
-  color: white;
+.notes-icon {
+  width: 100px;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  left: 280px;
+  bottom: 12px;
+
+
+  .edit-btn {
+    /* color: black; */
+    font-size: 16.5px;
+    margin: 2.5px;
+    padding: 1px;
+    border-radius: 32px;
+    width: 30px;
+  }
+}
+
+
+.E-btn {
+  position: relative;
+  top: -6px;
+  left: 12px;
+  margin: 6px 8px 4px 0px;
+  color: black;
+  border: none;
+  width: 40px;
+  height: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 3px 3px 15px -10px black;
+  border-radius: 50%;
+  font-weight: bolder;
+  font-size: xx-large;
+  padding: 3px;
+}
+
+.E-btn:hover {
+  background: none !important;
 }
