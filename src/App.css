@@ -103,6 +103,14 @@ footer {
   /* White text color */
 }
 
+.app.dark .edit-modal input{
+  color: black;
+}
+
+.app.dark .edit-modal textarea{
+  color: black;
+}
+
 /* Light Mode Styles (optional) */
 .app.light {
   background-color: #ffffff;
