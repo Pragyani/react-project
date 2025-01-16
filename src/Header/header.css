@@ -10,7 +10,7 @@
 }
 
 .header img {
-  margin-left: 50px;
+  margin-left: 20px;
   border-radius: 100px;
 }
 
@@ -20,11 +20,11 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-left: 30px;
+  /* padding-left: 30px; */
   padding-right: 40px;
   letter-spacing: 0.1px;
   word-spacing: 5px;
-  width: 50%;
+  width: 30%;
 }
 
 
@@ -35,7 +35,7 @@ ul {
   align-items: flex-end;
   /* justify-content: space-evenly; */
   padding: 5px 15px 5px 115px;
-  margin-left: 450px;
+  /* margin-left: 450px; */
 }
 
 ul li {
@@ -135,4 +135,27 @@ h5 {
   border-width: 5px;
   border-style: solid;
   border-color: #333 transparent transparent transparent;
+}
+
+.serach-field {
+  border: 1px solid rgba(0, 0, 0, 0.334);
+  width: 60%;
+  height: 40px;
+  margin-top: 18px;
+  border-radius: 12px;
+  /* font-size: 12px; */
+
+  .input-searcfield{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    position: relative;
+    bottom: 7px;
+    padding-left: 20px;
+    font-weight: 400;
+  }
+}
+
+
+.serach-field:hover{
+  border: 1px solid rgba(0, 0, 0, 0.653);
 }
