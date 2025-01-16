@@ -46,33 +46,20 @@ input {
 
 
 .add-btn {
-  margin: 10px;
+  margin: 10px 2px 2px 2px;
   color: black;
-  margin-left: 85%;
+  margin-left: 680px;
   border: none;
-  width: 40px;
+  width: 130px;
   height: 40px;
   background-color: transparent;
   cursor: pointer;
   outline: none;
   box-shadow: 3px 3px 15px -10px rgba(0, 0, 0, 0.333);
-  border-radius: 50%;
-  font-weight: bold;
-  font-size: x-large;
-  position: relative;
-  left: 72px;
+  border-radius: 5%;
+  font-weight: 500;
+  font-size: 18px;
 }
-
-.add-btn:hover {
-  color: rgb(42, 41, 41);
-  background-color: #5be1ae9a !important;
-  box-shadow: 3px 5px 15px -5px black;
-  cursor: pointer;
-}
-
-
-/* note.jsx styling */
-
 
 .note {
   background-color: #282525;
