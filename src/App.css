@@ -86,13 +86,13 @@ footer {
 }
 
 .app.dark button {
-  color: white;
+  color: rgba(255, 255, 255, 0.653);
   box-shadow: 3px 3px 15px -10px black;
 }
 
 .app.dark button:hover {
-  color: rgb(42, 41, 41);
-  background-color: #6a7d7f;
+  color: rgb(249, 247, 247);
+  /* background-color: #6a7d7f; */
   /* Dark button hover */
 }
 
@@ -103,11 +103,11 @@ footer {
   /* White text color */
 }
 
-.app.dark .edit-modal input{
+.app.dark .edit-modal input {
   color: black;
 }
 
-.app.dark .edit-modal textarea{
+.app.dark .edit-modal textarea {
   color: black;
 }
 
