@@ -23,17 +23,19 @@ export const Note = (props) => {
 
     return (
         <>
-            <div className="note">
-                <div className="notes-icon">
-                    <button className="del-btn" onClick={deletedNote}>
-                        <AiOutlineDelete className="deleted" />
-                    </button>
-                    <button className="E-btn" onClick={openEditbox}>
-                        <MdEdit className="edit-btn" />
-                    </button>
+            <div className="note-container">
+                <div className="note">
+                    <div className="notes-icon">
+                        <button className="del-btn" onClick={deletedNote}>
+                            <AiOutlineDelete className="deleted" />
+                        </button>
+                        <button className="E-btn" onClick={openEditbox}>
+                            <MdEdit className="edit-btn" />
+                        </button>
+                    </div>
+                    <h1>{noteContent.title}</h1>
+                    <p>{noteContent.content}</p>
                 </div>
-                <h1>{noteContent.title}</h1>
-                <p>{noteContent.content}</p>
             </div>
 
             {editbox && (
