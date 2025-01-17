@@ -1,6 +1,6 @@
 import React from "react"
 
 
-const Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfJx10T5pdqHuUjlB8o910koS1G9X1_UGZsQ&s"
+const Img = "https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png"
 
 export default Img;
