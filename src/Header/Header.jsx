@@ -2,7 +2,7 @@
 import React from "react";
 import Img from "../Images/logo";
 import './header.css';
-import { useDispatch , useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setInput } from "../reducer";
 
 /** External Dependencies. */
@@ -12,11 +12,11 @@ import { RiResetRightFill } from "react-icons/ri";
 import { MdDarkMode } from "react-icons/md";
 import { TfiViewList } from "react-icons/tfi";
 
-export const Header = ({ toggleTheme, isDarkMode }) => {
-    
-    const inputValue = useSelector((state) => 
-        {console.log('ani' , state)
-            return state.inputSlice});
+export const Header = ({ toggleTheme, isDarkMode,toggleView  }) => {
+
+    const inputValue = useSelector((state) => {
+        console.log('ani', state)
+        return state.inputSlice});
 
 
     const dispatch = useDispatch();
@@ -27,8 +27,10 @@ export const Header = ({ toggleTheme, isDarkMode }) => {
     };
     return (
         <div className={`header ${isDarkMode ? 'dark' : 'light'}`}>
-            <img src={Img} alt="logo" width="90" height="80" />
-            <p>AniPragya Keep</p>
+            <div className="header-logo">
+              <img src={Img} alt="keep-imh" />
+                <span className="logo-text">Keep</span>
+            </div>
 
             <div className="serach-field">
                 <input type="text" placeholder="Search Your Note..." className="input-searcfield" onChange={handleInputChange} value={inputValue} />
@@ -43,13 +45,9 @@ export const Header = ({ toggleTheme, isDarkMode }) => {
                     <RiResetRightFill />
                     <span className="tooltip">Reset</span>
                 </li>
-                <li className="icon-item">
-                    <FaUserLarge />
-                    <span className="tooltip">User</span>
-                </li>
-                <li className="icon-item">
+                <li className="icon-item" onClick={toggleView}>
                     <TfiViewList />
-                    <span className="tooltip">View List</span>
+                    <span className="tooltip">List View</span>
                 </li>
                 <li className="icon-item">
                     {/* Dark Mode Toggle */}
