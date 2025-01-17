@@ -15,6 +15,8 @@ const EditModal = ({ title, content, onClose, onSave }) => {
     return (
         <div className="edit-overlay" onClick={handleClickOutside}>
             <div className="edit-modal">
+                <h2>Edit your Note</h2>
+                <hr />
                 <input
                     type="text"
                     value={newTitle}
